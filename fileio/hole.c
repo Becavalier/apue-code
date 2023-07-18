@@ -1,14 +1,12 @@
 #include "apue.h"
 #include <fcntl.h>
 
-char	buf1[] = "abcdefghij";
-char	buf2[] = "ABCDEFGHIJ";
+char buf1[] = "abcdefghij";
+char buf2[] = "ABCDEFGHIJ";
 
-int
-main(void)
-{
-	int		fd;
-
+int main(void) {
+	int fd;
+/* optimal blocksize for I/O */
 	if ((fd = creat("file.hole", FILE_MODE)) < 0)
 		err_sys("creat error");
 
